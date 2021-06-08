@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:posion/Screens/Dashboard.dart';
 import 'package:get/get.dart';
+import 'package:posion/Screens/GenerateOTP.dart';
 
 class Splashscreen extends StatefulWidget {
   @override
@@ -10,8 +11,8 @@ class Splashscreen extends StatefulWidget {
 class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 4), () {
-      Get.to(() => DashBoard());
+    Future.delayed(Duration(seconds: 3), () {
+      Get.to(() => GenerateOTP());
     });
 
     super.initState();

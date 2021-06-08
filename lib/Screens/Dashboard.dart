@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_open_whatsapp/flutter_open_whatsapp.dart';
 import 'package:get/get.dart';
 import 'package:posion/Screens/Whiskey.dart';
 
@@ -29,6 +30,16 @@ class DashBoard extends StatelessWidget {
         appBar: AppBar(
           title: Text('Devils Poison'),
           actions: [
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: GestureDetector(
+                  onTap: () {
+                    //plug-in that opens whatsapp
+                    FlutterOpenWhatsapp.sendSingleMessage('+918655652518', '');
+                  },
+                  child: Image.asset('assets/whatsapplogo.png',
+                      color: Colors.white)),
+            ),
             IconButton(
                 icon: Icon(Icons.search),
                 onPressed: () {
@@ -91,7 +102,8 @@ class DashBoard extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(horizontal: 5, vertical: 30),
                       child: InkWell(
-                        onTap: () => goToSection(i),
+                        onTap: () =>
+                            goToSection(i), //Navigation for particular section
                         child: Container(
                           decoration: BoxDecoration(
                               color: Colors.indigo[700],

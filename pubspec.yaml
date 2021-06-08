@@ -58,6 +58,8 @@ flutter:
     - assets/jameson.jpg
     - assets/heinken.jpg
     - assets/jackdaniel.jpg
+    - assets/whatsapplogo.png
+    - assets/smsicon.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
